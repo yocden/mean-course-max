@@ -33,3 +33,4 @@ EVENT BINDING ==> (click)="onAddPost"
 STRING INTERPOLATION ==> {{ newPost }}
 2WAY BINDING ==> ngModel
 
+# mean-course-max
