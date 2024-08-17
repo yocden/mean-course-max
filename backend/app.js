@@ -22,14 +22,36 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin,X-Requested-With, Content-Type, Accept"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET,POST,PATCH,DELETE, OPTIONS"
+    "GET, POST, PATCH, DELETE, OPTIONS"
   );
   next();
 });
+
+// app.use((req, res, next) => {
+//   const allowedOrigins = [
+//     "http://localhost:4200",
+//     "https://0l6ptc8v-4200.asse.devtunnels.ms",
+//   ];
+//   const origin = req.headers.origin;
+
+//   if (allowedOrigins.includes(origin)) {
+//     res.setHeader("Access-Control-Allow-Origin", origin);
+//   }
+
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, PATCH, DELETE, OPTIONS"
+//   );
+//   next();
+// });
 
 //Routes
 app.post("/api/posts", (req, res, next) => {
